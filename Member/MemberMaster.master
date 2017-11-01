@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" MasterPageFile="../WebMainMaster.master" AutoEventWireup="true" CodeFile="MemberMaster.master.cs" Inherits="Member_MemberMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link rel="Stylesheet" type="text/css" href="../css/MemberMaster.css" />
+    <asp:ContentPlaceHolder ID="MemberHeaderContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="MemberContent" ContentPlaceHolderID="WebMainContentPlaceHolder" runat="Server">
+    <div id="Menu">
+        <div class="MenuItem">
+            <asp:Menu ID="MemberMenu" runat="server" DataSourceID="MemberMenuXmlDataSource">
+                <DataBindings>
+                    <asp:MenuItemBinding DataMember="Item" NavigateUrlField="url" TextField="name" />
+                </DataBindings>
+            </asp:Menu>
+            <asp:XmlDataSource ID="MemberMenuXmlDataSource" runat="server" DataFile="MemberMenuXML.xml" XPath="/*/*"></asp:XmlDataSource>
+        </div>
+
+        <div class="MenuItem">
+            <asp:Panel ID="VIPPanel" runat="server" Visible="false">
+                <asp:Menu ID="VIPMenu" runat="server" DataSourceID="VIPMenuXmlDataSource">
+                    <DataBindings>
+                        <asp:MenuItemBinding DataMember="item" NavigateUrlField="url" TextField="name" />
+                    </DataBindings>
+                </asp:Menu>
+                <asp:XmlDataSource ID="VIPMenuXmlDataSource" runat="server" DataFile="VIPMenuXML.xml" XPath="/*/*"></asp:XmlDataSource>
+            
+        </asp:Panel></div>
+
+        <div><asp:Panel ID="AdminPanel" runat="server" Visible="false">
+            
+                <asp:Menu ID="AdminMenu" runat="server" DataSourceID="AdminMenuXmlDataSource">
+                    <DataBindings>
+                        <asp:MenuItemBinding DataMember="item" NavigateUrlField="url" TextField="name" />
+                    </DataBindings>
+                </asp:Menu>
+                <asp:XmlDataSource ID="AdminMenuXmlDataSource" runat="server" DataFile="AdminMenuXML.xml" XPath="/*/*"></asp:XmlDataSource>
+            
+        </asp:Panel></div>
+
+        <div class="Logout">
+            <asp:LoginStatus ID="MemberMasterLoginStatus" runat="server" LogoutText="退出" />
+        </div>
+    </div>
+
+    <div id="MemberMain">
+        <asp:ContentPlaceHolder ID="MemberMainContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+

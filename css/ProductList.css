@@ -1,0 +1,48 @@
+
+.layoutbox {
+    padding: 20px 0px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    
+}
+
+.groupbox {
+    margin: 2px auto;
+}
+
+
+.productItem {
+    width: 30%;
+    float: left;height:360px;
+    padding:10px;
+}
+.productItem a {
+    border:0;
+}
+.productItem:hover {
+    background:#EDEDED;
+}
+
+.productImg {
+    width: 150px;
+    height:150px;
+}
+
+.buttonbox {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.linkbutton {
+    text-decoration: none;
+    border: 1px #ff0000 solid;
+    padding: 3px;
+    background-color: #eee;
+}
+
+.datapager {
+    margin:0 auto;
+    width: 250px;
+}

@@ -1,0 +1,41 @@
+﻿* 
+{
+    padding: 0px;
+    margin: 0 auto;
+}
+body 
+{
+    font-family: 'Microsoft YaHei', 'Arial', 'Helvetica', 'sans-serif';
+	font-size: 17px;
+	padding: 0px 6%;
+    background:#EEEEF2;
+}
+
+a {
+    text-decoration: none;
+	font-weight: bold;
+}
+a:link, a:visited
+{
+    color: #858585;
+}
+
+a:hover
+{
+    color: #9983C0;
+    border-bottom:5px solid #9983C0;
+}
+
+a:active
+{
+    color: #9983C0;
+}
+
+.clear 
+{
+    clear:both;
+}
+
+.wapper {
+    width:1080px;
+}

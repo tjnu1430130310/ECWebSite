@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="WebMainMaster.master.cs"
+    Inherits="WebMainMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" href="css/Main.css" type="text/css" />
+    <link rel="Stylesheet" type="text/css" href="css/Navigation.css" />
+    <link  rel="Stylesheet" type="text/css" href="css/Footer.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wapper">
+        <div id="Header">
+            <div>
+                <asp:Image ID="Image1" ImageUrl="images/logo.gif" runat="server" />
+                <h1>将世界买回家</h1>
+            </div>
+            <div class="RightHeader">
+                <asp:Menu ID="NavigationMenu" runat="server" DataSourceID="NavigationMenuXmlDataSource" CssClass="Navlist">
+                    <DataBindings>
+                        <asp:MenuItemBinding DataMember="Item" NavigateUrlField="url" TextField="name" />
+                    </DataBindings>
+                </asp:Menu>
+                <asp:XmlDataSource ID="NavigationMenuXmlDataSource" runat="server" DataFile="NavigationMenuXML.xml"
+                    XPath="/*/*"></asp:XmlDataSource>
+            </div>
+        </div><!-- end of #Header -->
+        <div class="clear"></div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="WebMainContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="Footer">
+            <p>
+                © 2016 Website · <a href="mailto:390592303@qq.com">Our Email: 390592303@qq.com</a></p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

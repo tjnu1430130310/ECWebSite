@@ -1,0 +1,40 @@
+﻿.SignMain {
+    width: 240px;
+    padding:10px;
+    margin: 0 auto;
+}
+.Label {
+    margin: 20px 0px;
+}
+.TextBox {
+    height: 30px;
+    padding:2px;
+}
+
+
+.Button {
+    color:#ffffff;
+    padding: 10px 30px;
+    border:0;
+    background:#9970E2;
+}
+.Button:link, .Button:visited
+{
+    background:#9970E2;
+}
+.Button:hover
+{
+    background:#AA81F3;
+}
+.Button:active {
+    background:#AA81F3;
+}
+
+.LoggedIn {
+
+}
+.LoggedIn ul li {
+    list-style:none;
+    text-align: center;
+    padding:10px 0;
+}

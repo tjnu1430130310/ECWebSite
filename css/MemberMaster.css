@@ -1,0 +1,26 @@
+﻿#Menu {
+    float: left;
+    width:240px;
+    padding:10px;
+}
+#Menu a {
+    border:0;
+}
+
+#Menu .MenuItem {
+    margin: 10px;
+}
+#Menu .MenuItem ul li {
+    padding: 10px;
+    text-align:left;
+}
+#Menu .Logout {
+    padding: 5px 0px;
+    width:200px;
+}
+
+#MemberMain {
+    float: right;
+    width:70%;
+    padding:10px;
+}

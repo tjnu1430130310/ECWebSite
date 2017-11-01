@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <item url="../ShoppingCart/ShoppingCart.aspx" name="查看购物车"></item>
+  <item url="ViewOrder.aspx" name="查看订单"></item>
+</root>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item url="Index.aspx" name="首页"></Item>
+  <Item url="Product/ProductList.aspx" name="商品"></Item>
+  <Item url="ShoppingCart/ShoppingCart.aspx" name="购物车"></Item>
+</Root>

@@ -1,0 +1,63 @@
+﻿/******************** Top #Header ************************/
+#Header
+{
+    float:left;
+	width: 100%;
+	/* border-bottom: 1px dotted;#5D5A53
+	margin-bottom: 10px;*/
+    height:120px;
+}
+#Header h1
+{
+	font-size: 18px;
+	float: left;
+	background: no-repeat;
+	padding: 45px 0px 5px 0px;
+}
+#Header img {
+    float:left;
+    width:85px;
+    margin:10px;
+}
+/******************** End #Header ************************/
+
+.RightHeader 
+{
+    float:right;
+    width:255px;
+}
+
+/******************** Top .Navlist ************************/
+.Navlist
+{
+    float:left;
+    width:100%;
+}
+
+.Navlist ul li
+{
+	display: inline;
+}
+
+.Navlist ul li a
+{
+	border-left: 1px;/* dotted #8A8575*/
+	padding: 10px;
+	margin: 10px;
+	/*color: #8A8575;*/
+	text-decoration: none;
+	float: left;
+}
+
+.Navlist ul li:first-child a
+{
+	border: none;
+}
+
+.Navlist ul li a:hover
+{
+	/*color: #F6855E;*/
+}
+
+
+/******************** End .Navlist ************************/

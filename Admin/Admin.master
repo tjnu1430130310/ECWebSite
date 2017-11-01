@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="Stylesheet" href="../css/Main.css" type="text/css" />
+    <link rel="Stylesheet" type="text/css" href="../css/MemberMaster.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wapper">
+            <div id="Menu">
+                <div class="MenuItem">
+                    <asp:Panel ID="AdminMenuPanel" runat="server">
+                        <asp:XmlDataSource ID="AdminMenuXmlDataSource" runat="server" DataFile="~/Admin/AdminMenuXML.xml" XPath="/*/*"></asp:XmlDataSource>
+                        <asp:Menu ID="AdminMenu" runat="server" DataSourceID="AdminMenuXmlDataSource">
+                            <DataBindings>
+                                <asp:MenuItemBinding DataMember="Item" NavigateUrlField="url" TextField="name" />
+                            </DataBindings>
+                        </asp:Menu>
+                    </asp:Panel>
+                </div>
+                <div class="Logout">
+                    <asp:LoginStatus ID="MemberMasterLoginStatus" runat="server" LogoutText="退出" />
+                </div>
+            </div>
+
+            <div id="MemberMain">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

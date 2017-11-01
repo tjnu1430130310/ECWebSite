@@ -1,0 +1,62 @@
+﻿.SwitchContainer, .SwitchContainer img {
+            width: 1080px;
+            height: 360px;
+        }
+
+        .SwitchContainer {
+            border: 0 #333;
+        }
+
+            .SwitchContainer img {
+                border: 0;
+            }
+
+      .SwitchContainer  .num {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+        }
+
+          .SwitchContainer .num li {
+                float: left;
+                list-style: none;
+                color: #fff;
+                text-align: center;
+                line-height: 16px;
+                width: 16px;
+                height: 16px;
+                font-family: Arial;
+                font-size: 12px;
+                cursor: pointer;
+                margin: 0px;
+                border: 1px solid #707070;
+                background-color: #060a0b;
+            }
+
+               .SwitchContainer .num li.on {
+                    line-height: 18px;
+                    width: 18px;
+                    height: 18px;
+                    font-size: 14px;
+                    border: 0;
+                    background-color: #ce0609;
+                    font-weight: bold;
+                }
+
+       .SwitchContainer table {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            /*border="0" cellpadding="0" cellspacing="0"*/
+        }
+
+           .SwitchContainer table tr, .SwitchContainer table th, .SwitchContainer table td {
+                border: 0px none;
+                margin: 0;
+                padding: 0;
+            }
+
+       #SwitchImg .center {
+            margin: auto;
+            width: 200px;
+        }

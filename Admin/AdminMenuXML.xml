@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Item url="Member.aspx" name="个人中心"></Item>
+  <Item url="../Product/ProductManager.aspx" name="商品管理"></Item>
+  <Item url="Order.aspx" name="订单管理"></Item>
+  <Item url="VIP.aspx" name="VIP 管理"></Item>
+</Root>

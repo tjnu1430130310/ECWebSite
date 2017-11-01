@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" MasterPageFile="../WebMainMaster.master" AutoEventWireup="true"
+    CodeFile="Product.master.cs" Inherits="Product_Product" %>
+
+<%@ Register Src="~/UserControl/Search.ascx" TagPrefix="uc1" TagName="Search" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link rel="Stylesheet" type="text/css" href="../css/ProductMaster.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/ProductClassMenu.css" />
+    <link rel="Stylesheet" type="text/css" href="../css/sign.css" />
+    <asp:ContentPlaceHolder ID="HeaderContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="WebMainContentPlaceHolder" runat="Server">
+    <div>
+        <div id="ClassMenu">
+            <asp:Menu ID="ProductClassMenu" runat="server" CssClass="ProductClassMenu">
+            </asp:Menu>
+        </div>
+        <div class="clear"></div>
+
+        <div id="ProductMain">
+            <div class="LeftMain">
+                <div>
+                    <uc1:Search runat="server" ID="Search" />
+                </div>
+                <div>
+                    <asp:LoginView ID="MasterLoginView" runat="server">
+                        <AnonymousTemplate>
+                            <div class="LoginControl">
+                                <div>
+                                    <div class="Label">
+                                        <asp:Label ID="MemberNameLabel" runat="server" Text="账号："></asp:Label>
+                                        <asp:TextBox ID="MemberNameTextBox" runat="server" placeholder="VIP Name" CssClass="TextBox"></asp:TextBox>
+                                    </div>
+                                    <div class="Label">
+                                        <asp:Label ID="PasswordLabel" runat="server" Text="密码："></asp:Label>
+                                        <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password" placeholder="Password" CssClass="TextBox"></asp:TextBox>
+                                    </div>
+                                    <div class="Label">
+                                        <asp:CheckBox ID="RememberCheckBox" runat="server" Text="记住我" Checked="false" />
+                                        <asp:Button ID="LoginButton" runat="server" Text="登录" OnClick="LoginButton_Click" CssClass="Button" /><br />
+                                        <asp:Label ID="MsgLabel" runat="server" ForeColor="Red" Text="您输入的用户名或密码错误，请重新输入！"
+                                            Visible="false" CssClass="TextBox"></asp:Label>
+                                    </div>
+                                </div>
+                                <div class="Label">
+                                    <p>还没有账号？快去<a href="../Member/Register.aspx">注册账号</a></p>
+                                </div>
+                            </div>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <div class="LoggedIn">
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="MemberHyperLink" runat="server" Text="个人中心" NavigateUrl="../Member/Member.aspx"></asp:HyperLink></li>
+                                <li>
+                                    <asp:LoginStatus ID="ProductMasterLoginStatus" runat="server" LogoutText="退出" />
+                                </li>
+                            </ul></div>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+
+                </div>
+
+            </div>
+
+            <div class="RightMain">
+                <asp:ContentPlaceHolder ID="ProductListContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+</asp:Content>

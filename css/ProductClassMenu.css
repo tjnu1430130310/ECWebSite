@@ -1,0 +1,21 @@
+﻿
+
+.ProductClassMenu 
+{
+    /*float:left;*/
+    height:50px;
+}
+.ProductClassMenu ul li 
+{
+    display: inline;
+}
+.ProductClassMenu ul li a
+{
+	/*border: 1px dotted; #8A8575*/
+	padding: 10px;
+	margin: 10px 19px;
+	/*color: #8A8575;*/
+	text-decoration: none;
+	float: left;
+	font-size:15px;
+}
