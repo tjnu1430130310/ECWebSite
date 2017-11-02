@@ -5,3 +5,7 @@
 缺点：没有支付功能；没有物流模块
 
 制作时参考了微软官网的各种文档和教程，仅供学习参考使用。
+
+界面预览
+
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7Cart.PNG)
