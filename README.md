@@ -8,4 +8,13 @@
 
 界面预览
 
+
+
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7Products.PNG)
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7Details.PNG)
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7Login.PNG)
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7Register.PNG)
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7User.PNG)
 ![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7Cart.PNG)
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7AddOrder.PNG)
+![](https://github.com/tjnu1430130310/ECWebSite/blob/master/images/ECWebSitePhoto/%E6%8D%95%E8%8E%B7Order.PNG)
