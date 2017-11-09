@@ -70,6 +70,7 @@ Web网站页面总体分为上中下三个部分，上部为导航框Navigation�
 
 默认情况下，ASP.NET 应用程序使用Windows身份验证。更改为窗体身份验证的身份验证类型，需要修改<authentication>元素模式属性的形式，代码如下：
 
+```
 <configuration>
     <system.web>
         <compilation debug="false" targetFramework="4.0" />
@@ -80,9 +81,11 @@ Web网站页面总体分为上中下三个部分，上部为导航框Navigation�
     </system.web>
   ... ...
 </configuration>
+```
 
 在创建窗体身份验证票证时，使用用户名文本框MemberNameLabel的Text属性作为窗体的用户名参数身份验证票，persistCookie参数则记录复选框的选中的状态，代码如下：
 
+```
 string MemberName = ((TextBox)MasterLoginView.FindControl("MemberNameTextBox")).Text.ToString().Trim();
 ...
 FormsAuthentication.RedirectFromLoginPage(MemberName, ((CheckBox)MasterLoginView.FindControl("RememberCheckBox")).Checked);
@@ -95,6 +98,7 @@ FormsAuthentication.RedirectFromLoginPage(MemberName, ((CheckBox)MasterLoginView
         {  //用户未经身份验证
             ...
         }
+```
 
 假设用户没有登录，用户将进入登录页面。
 
@@ -110,10 +114,11 @@ FormsAuthentication.RedirectFromLoginPage(MemberName, ((CheckBox)MasterLoginView
 
 登录后，VIP将进入他的个人中心，在个人中心，VIP可以查看、编辑他的资料，可以管理购物车与订单，可以退出账号。用户应当填写正确的个人信息，以使得平台能够为其提供优质服务。若VIP填写的资料并不完整，他新建的订单将不被系统允许通过。若订单因此原因未通过，VIP可以在订单页面填写他的个人资料。
 
-
 VIP也可以返回购物车页面继续浏览并将商品加入购物车，可以将商品移出购物车，可以更改需要购买的商品数量。数量列的文本框可以使用框内右侧的按钮改变数字，也可以手动输入数字，但不可以输入除数字以外的其他字符。文本框使用了 type="Number"，也可以使用属性TextMode="Number"达到同样效果，但此方法不兼容IE6。
 
+```
 <asp:TextBox ...onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" ontextchange="ItemTotalCalcular(this);" Text='<%# Bind("Quantity") %>' type="Number"></asp:TextBox>
+```
 
 用户确认购物车信息后，可以点击结算生成未支付订单。
 
@@ -132,6 +137,9 @@ VIP也可以返回购物车页面继续浏览并将商品加入购物车，可�
 
 ## 参考资料：
 ASP.NET官网 网址：https://www.asp.net/
+
 《SQL Database Driven Menu in ASP.NET (C#)》网址：http://www.aspnettutorials.com/tutorials/controls/sqldb-driven-menu-csharp/
+
 《FormView 控件》网址：https://msdn.microsoft.com/zh-cn/library/cc295401.aspx
+
 《An Overview of Forms Authentication (C#)》网址：https://www.asp.net/web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
